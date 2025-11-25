@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="app container-fluid bg-color">
+      <!-- SEARCH -->
+      <div class="search-box">
+        <input
+          type="text"
+          placeholder="Search"
+          class="t"
+          key="searchPlaceholder"
+          id="search"
+        />
+        <div class="search-icon">
+          <i class="far fa-search"></i>
+        </div>
+        <div class="cancel-icon">
+          <i class="far fa-times"></i>
+        </div>
+        <div class="search-data"></div>
+        <ul id="result"></ul>
+      </div>
+      <!-- ==================================================== -->
+      <!-- HEADING -->
+      <h1 class="t text-center styleHeading" key="mainTitle">
+        Периодна табела на елементи
+      </h1>
+      <!-- DIV LEGEND -->
+
+      <div class="div legendDiv">
+        <div>
+          <h2 class="t colorLegend text-center Border" key="legend">Legend</h2>
+        </div>
+
+        <div class="d-flex">
+          <div class="styleDivLegend">
+            <div class="marginBottom">
+              <i class="fas fa-square alkaniMetali"></i>
+              <span class="t" key="alkalni">Алкални метали</span>
+            </div>
+            <div class="marginBottom">
+              <i class="fas fa-square drugiMetali"></i>
+              <span class="t" key="drugiM">Други метали</span>
+            </div>
+          </div>
+
+          <div class="styleDivLegend">
+            <div class="marginBottom">
+              <i class="fas fa-square akaliZemja"></i>
+              <span class="t" key="akali">Акали Земја метали</span>
+            </div>
+            <div class="marginBottom">
+              <i class="fas fa-square metaloidi"></i>
+              <span class="t" key="meteloidi">Металоиди</span>
+            </div>
+          </div>
+
+          <div class="styleDivLegend">
+            <div class="marginBottom">
+              <i class="fas fa-square tranzicioni"></i>
+              <span class="t" key="trans">Транзициони метали</span>
+            </div>
+            <div class="marginBottom">
+              <i class="fas fa-square nemetali"></i>
+              <span class="t" key="nemetali">Неметали</span>
+            </div>
+          </div>
+
+          <div class="styleDivLegend">
+            <div class="marginBottom">
+              <i class="fas fa-square lantanidI"></i>
+              <span class="t" key="lantanidi">Лантаниди</span>
+            </div>
+            <div class="marginBottom">
+              <i class="fas fa-square haloG"></i>
+              <span class="t" key="halogeni">Халогени</span>
+            </div>
+          </div>
+
+          <div class="styleDivLegend">
+            <div class="marginBottom">
+              <i class="fas fa-square Aktinidi"></i>
+              <span class="t" key="aktinidi">Актиниди</span>
+            </div>
+            <div class="marginBottom">
+              <i class="fas fa-square blagorodenGas"></i>
+              <span class="t" key="Bgasovi">Благородни гасови</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================================== -->
+
+      <!-- PERIODIC TABLE -->
+      <div class="row">
+        <div class="col-10">
+          <div class="periodic-table"></div>
+          <div class="row px-0">
+            <div class="col-1">
+              <div class="lathanidies-actinides">
+                <p class="pt-4 t" key="headingL">Лантханиди</p>
+                <p class="pt-4 t" key="aktinidi">Актиниди</p>
+              </div>
+            </div>
+            <div class="col-10 px-4 ml-4">
+              <div class="rowA row"></div>
+              <div class="row1 row"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================================== -->
+
+      <!-- MODAL (IFRAME) -->
+      <div class="modal">
+        <div class=""><i class="far fa-times close modalClosed"></i></div>
+        <iframe src="" class="frame"> </iframe>
+      </div>
+
+      <!-- ================================================================================ -->
+      <!--  DETAILS PAGE -->
+      <div class="SingleElement">
+        <div class="row">
+          <div class="col-8">
+            <div>
+              <i
+                class="
+                  far
+                  fa-times
+                  close
+                  modalClosed
+                  border
+                  rounded
+                  p-1
+                  pt-2
+                  positionX
+                "
+              ></i>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="d-flex justify-content-between align-items-end">
+                  <div class="paintEl elBorder mt-4">
+                    <div class="div d-flex justify-content-between">
+                      <span
+                        class="nStyle paintEl"
+                        style="font-size: 12px"
+                      ></span>
+                      <ul class="ul"></ul>
+                    </div>
+                    <h1 class="theEl"></h1>
+                    <p class="d-flex font-sizeA mb-0 atomic-mass"></p>
+                  </div>
+
+                  <div class="el">
+                    <h5 class="name paintEl"></h5>
+                  </div>
+                </div>
+
+                <div class="row my-3 informations">
+                  <div class="col d-flex">
+                    <ul class="informations px-0">
+                      <li class="t" key="atomskaT">Атомска тежина</li>
+                      <li class="t" key="gustina">Густина</li>
+                      <li class="t" key="topneje">Точка на топење</li>
+                      <li class="t" key="vrienje">Точка на вриење</li>
+                    </ul>
+                    <ul class="properties"></ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 summaryBorder mt-4 t">
+                <div class="topRight">
+                  <div class="dots">
+                    <i class="fas fa-ellipsis-h"></i>
+                  </div>
+                  <p class="summary"></p>
+                  <h4 class="dots">
+                    'Element detail - PDF' <i class="fas fa-file-pdf"></i>
+                  </h4>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-4">
+                  <img class="d-block w-100 elImg" />
+                </div>
+                <!-- ===================================== -->
+                <!-- CAROUSEL -->
+                <div class="col-4 border border-3 rounded elimg">
+                  <div
+                    id="carouselExampleControls"
+                    class="carousel slide"
+                    data-ride="carousel"
+                  >
+                    <div class="carousel-inner"></div>
+                    <a
+                      class="carousel-control-prev"
+                      href="#carouselExampleControls"
+                      role="button"
+                      data-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a
+                      class="carousel-control-next"
+                      href="#carouselExampleControls"
+                      role="button"
+                      data-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ===================================== -->
+          <!-- SCROLL BAR  -->
+          <div class="col-4 px-4 mt-4 scroll-fontSize">
+            <div class="row">
+              <div class="col-11 SCROLL border border-2 rounded paintEl">
+                <form class="d-flex justify-content-start mt-4">
+                  <i class="fas fa-search s mt-3 ml-3"></i
+                  ><input
+                    class="form-control"
+                    type="search"
+                    placeholder="SEARCH..."
+                    aria-label="Search"
+                  />
+                </form>
+
+                <div class="mt-4">
+                  <h5 class="t" key="pregled">01.Преглед</h5>
+
+                  <div class="d-flex">
+                    <ul class="styleScroll mr-3 ml-0">
+                      <li class="t" key="simbol">Симбол</li>
+                      <li class="t" key="atomskiBr">Атомски број</li>
+                      <li class="t" key="atomskaT">Атомска тежина</li>
+                      <li class="t" key="gustina">Густина</li>
+                      <li class="t" key="topneje">Точка на топење</li>
+                      <li class="t" key="vrienje">Точка на вриење</li>
+                    </ul>
+                    <ul class="Properties ml-4"></ul>
+                  </div>
+                </div>
+                <div class="div">
+                  <h5 class="t" key="svojstva">02.Топлински свojства</h5>
+                  <div class="d-flex border-top justify-content-around">
+                    <ul class="styleScroll mr-3 ml-0">
+                      <li class="t" key="faza">Фаза</li>
+                      <li class="t" key="topneje">Точка на топење</li>
+                      <li class="t" key="vrienje">Точка на вриење</li>
+                      <li class="t" key="apTocka">
+                        Апсолутна точка<br />
+                        на топење
+                      </li>
+                      <li class="t" key="apTockaV">
+                        Апсолутна точка<br />
+                        на вриење
+                      </li>
+                      <li class="t" key="pregolemi">Критички преголеми</li>
+                      <li class="t" key="temp">Критична температура</li>
+                      <li class="t" key="fuzija">Топлина на фузија</li>
+                      <li class="t" key="ispruvanje">Топлина на испарување</li>
+                      <li class="t" key="sogoruvanje">Топлина на согорување</li>
+                      <li class="t" key="toplina">Специфична топлина</li>
+                      <li class="t" key="indeks">Адиабатски индекс</li>
+                      <li class="t" key="tocka">Нил точка</li>
+                      <li class="t" key="sprovodlivost">
+                        Термичка спроводливост
+                      </li>
+                      <li class="t" key="ekspanzija">Термичка експанзија</li>
+                    </ul>
+                    <ul class="styleScroll tProperties"></ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="fizickiS">03.Физички својства</h5>
+
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll ml-0">
+                      <li class="t" key="gustina">Густина</li>
+                      <li class="t" key="tecnost">Густина(Течност)</li>
+                      <li class="t" key="MV">Моларен волумен</li>
+                      <li class="t" key="TV">Тврдина на Бринел</li>
+                      <li class="t" key="MC">Мохсова цврстина</li>
+                      <li class="t" key="MM">Масовно модул</li>
+                      <li class="t" key="MS">Модул на смолкнување</li>
+                      <li class="t" key="MM">Масовно модул</li>
+                      <li class="t" key="MT">Моларната топлина</li>
+                      <li class="t" key="TI">Термички измазнување</li>
+                    </ul>
+                    <ul class="styleScroll mr-3 PhProperties"></ul>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 class="t" key="R">04.Реактивност</h5>
+
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll ml-0">
+                      <li class="t" key="V">Валентност</li>
+                      <li class="t" key="EN">Електронегативност</li>
+                      <li class="t" key="EA">Електронска афинитет</li>
+
+                      <li class="t" key="IE">Ионска енергија</li>
+                    </ul>
+                    <ul class="styleScroll reactivity mr-3"></ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="sigurnost">05.Сигурност</h5>
+
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll ml-0">
+                      <li class="t" key="TA">Точка на автониг</li>
+                      <li class="t" key="FA">Флеш точка</li>
+                      <li class="t" key="TS">Топлина на согорување</li>
+                    </ul>
+                    <ul class="styleScroll mr-3">
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="K">06.Класификации</h5>
+
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll mr-3 ml-0">
+                      <li class="t" key="AI">Алтернативни имиња</li>
+                      <li class="t" key="IA">Имиња на алотропи</li>
+                      <li class="t" key="B">Блокирај</li>
+                      <li class="t" key="G">Група</li>
+                      <li class="t" key="P">Период</li>
+                      <li class="t" key="BO">Боја</li>
+                      <li class="t" key="O">Откриено</li>
+                      <li class="t" key="GF">Гасна фаза</li>
+                    </ul>
+                    <ul class="styleScroll classi"></ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="ES">07.Електрични својства</h5>
+
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll mr-4 ml-0">
+                      <li class="t" key="EL">Електричен тип</li>
+                      <li class="t" key="ELS">
+                        Електрична<br />
+                        спроводливост
+                      </li>
+                      <li class="t" key="OT">Отпорност</li>
+                      <li class="t" key="SST">
+                        Суперспроводлива<br />
+                        точка
+                      </li>
+                    </ul>
+                    <ul class="styleScroll ml-2">
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="MaS">08.Магнетни Својства</h5>
+
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll mr-3 ml-0">
+                      <li class="t" key="mSvojstva">Mагнетни својства</li>
+                      <li class="t" key="tLekuvanje">Точка на лекување</li>
+                      <li class="t" key="mmo">
+                        Масовна магнетна<br />
+                        осетливост
+                      </li>
+                      <li class="t" key="Mmo">
+                        Моларна магнетна <br />
+                        осетливост
+                      </li>
+                      <li class="t" key="Vmo">
+                        Волуменска магнетна<br />
+                        осетливост
+                      </li>
+                    </ul>
+                    <ul class="styleScroll">
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="treasure">09.Богатства</h5>
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll mr-3 ml-0">
+                      <li class="t" key="UNI">Во универзум</li>
+                      <li class="t" key="SUN">Во сонце</li>
+                      <li class="t" key="MET">Во метеорити</li>
+                      <li class="t" key="ZKo">Во земјината кора</li>
+                      <li class="t" key="Oke">Во океаните</li>
+                      <li class="t" key="LJG">Во луѓето</li>
+                    </ul>
+                    <ul class="styleScroll ml-4">
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                      <li>N/A</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="t" key="ADimenzii">
+                    10.Атомски димензии и структури
+                  </h5>
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll">
+                      <li class="t" key="ARA">Атомски радиус</li>
+                      <li class="t" key="KRA">Ковалентен радиус</li>
+                      <li class="t" key="VDVR">Ван дер Валс радиус</li>
+                      <li class="t" key="KST">Кристална структура</li>
+                      <li class="t" key="LALGI">Лакови агли</li>
+                      <li class="t" key="KL">Константи на латекс</li>
+                      <li class="t" key="IPG">Име на просторната група</li>
+                      <li class="t" key="BPG">Број на просторна група</li>
+                    </ul>
+                    <ul class="styleScroll mr-5 atomicStructures"></ul>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 class="t" key="nuklearniS">11.Нуклеарни својства</h5>
+                  <div class="d-flex border-top">
+                    <ul class="styleScroll mr-0">
+                      <li class="t" key="halflife">Пола живот</li>
+                      <li class="t" key="lifetime">Доживотна</li>
+                      <li class="t" key="decay">Режим на распаѓање</li>
+                      <li class="t" key="Kbr">Квантитативен број</li>
+                      <li class="t" key="NPR">Неутронски пресек</li>
+                      <li class="t" key="ANM">Апсорпција на неутронска маса</li>
+                      <li class="t" key="PIZ">Познати изотопи</li>
+                      <li class="t" key="SIZ">Стабилни изотопи</li>
+                      <li class="t" key="IZZ">Изoтопски изобили</li>
+                    </ul>
+                    <ul class="styleScroll mr-5 ml-0 nuclearP"></ul>
+                  </div>
+                </div>
+
+                <!-- ======== -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================================ -->
+      <!-- ABOUT US -->
+      <div class="modaL">
+        <img src="./images/Brain.png" />
+        <div class=""><i class="far fa-times close modalClosed"></i></div>
+        <img src="./images/img2.png" alt="" />
+        <img src="./images/img1.png" alt="" />
+        <img src="./images/img3.jpg" alt="" />
+
+        <div class="info">
+          <h3 style="font-family: sans-serif" key="aboutUsHeading" class="t">
+            ИЗРАБОТЕНО ОД СТУДЕНТИТЕ НА АКАДЕМИЈАТА
+          </h3>
+          <div class="social">
+            <div class="wDiv">
+              <p>Web:</p>
+              <a href="https://codepreneurs.co" target="_blank"
+                >codepreneurs.co</a
+              >
+            </div>
+            <div class="wDiv">
+              <p class="t" key="email">Е-маил:</p>
+              <a href="mailto:contact@brainster.co" target="_blank"
+                >contact@brainster.co</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ICONS,LANGUAGE,SOUND -->
+
+      <div class="linksLeft">
+        <div class="language">
+          <div class="first">
+            <a class="lang" id="mk"
+              ><img src="./images/mkFlag.png" width="92%"
+            /></a>
+          </div>
+          <div>
+            <a class="lang" id="en"
+              ><img src="./images/enFlag.png" width="92%"
+            /></a>
+          </div>
+        </div>
+
+        <div class="Sound">
+          <i class="fas fa-volume" id="hide-button">
+            <audio src="./click.mp3" id="audio"></audio
+          ></i>
+
+          <i class="fas fa-volume-down" id="show-button"> </i>
+        </div>
+      </div>
+
+      <div class="linksRight">
+        <a href="https://www.instagram.com/brainsterco/" target="_blank"
+          ><i class="fab fa-instagram borderIcons"></i
+        ></a>
+        <a href="https://www.facebook.com/brainster.co/" target="_blank"
+          ><i class="fab fa-facebook-f borderIcons"></i
+        ></a>
+        <a href=""> <i class="fas fa-ellipsis-h borderIcons aboutUs"></i></a>
+      </div>
+    </div>
+
+    <!-- ================================================================================ -->
+    <div class="responsive"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./periodic_table_en.js"></script>
+    <script src="./periodic_table_mk.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
